@@ -22,10 +22,6 @@ class Solution:
             arr_len -= 1
         return length
 
-    # 482. License Key Formatting
-    def license_key_formatting(self, s: str, k: int) -> str:
-        pass
-
 
 if __name__ == "__main__":
     s = " Hello   World  "
