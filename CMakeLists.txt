@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(LeetCode_Algorithm_Quest
         T1_1_lengthOfLastWord.cpp
-        T0_two_sum.cpp)
+        T0_two_sum.cpp
+        T2_2_removeDuplicates.cpp)
