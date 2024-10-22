@@ -3,9 +3,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def missingNumber(nums: List[int]) -> int:
+    def missingNumber(nums: List[int]) -> int:  # beats 97.07
         nums = sorted(nums)
-        for i in range(len(nums) + 1):
+        for i in range(len(nums)):
             if i != nums[i]:
                 return i
         return len(nums)
