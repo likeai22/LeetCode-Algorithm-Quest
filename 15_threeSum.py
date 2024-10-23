@@ -11,7 +11,7 @@ class Solution:
         for i in range(len(nums)):
             left = i + 1
             right = len(nums) - 1
-            if len(nums) > 3 and nums[i] == nums[i - 1]:
+            if len(set(nums)) > 1 and nums[i] == nums[i - 1]:
                 break
             while left < right:
                 if left == i:
