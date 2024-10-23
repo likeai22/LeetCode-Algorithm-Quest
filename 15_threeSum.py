@@ -9,7 +9,7 @@ class Solution:
         nums.sort()
 
         for i in range(len(nums)):
-            left = 0
+            left = i + 1
             right = len(nums) - 1
             while left < right:
                 if left == i:
@@ -22,11 +22,12 @@ class Solution:
                     if not key in unique_triplets:
                         unique_triplets.add(key)
                         result.append(list(key))
-                    break
                 if summ + nums[i] > 0:
                     right -= 1
                 else:
                     left += 1
+            left += 1
+            right -= 1
         return result
 
 
