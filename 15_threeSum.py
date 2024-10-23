@@ -11,6 +11,8 @@ class Solution:
         for i in range(len(nums)):
             left = i + 1
             right = len(nums) - 1
+            if len(nums) > 3 and nums[i] == nums[i - 1]:
+                break
             while left < right:
                 if left == i:
                     left += 1
@@ -33,6 +35,7 @@ class Solution:
 
 if __name__ == "__main__":
     # nums = [-1, 0, 1, 2, -1, -4]  # Accepted
-    nums = [-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]  # Wrong Answer 98 / 313 testcases passed
+    # nums = [-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]
+    nums = [0, 0, 0]
     result = Solution.threeSum(nums)
     print("result", result)
