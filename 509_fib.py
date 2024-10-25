@@ -2,6 +2,8 @@ from functools import lru_cache
 
 
 class Solution:
+    cache = {}
+
     def fib_easy(self, n: int) -> int:  # 34.35% 24.22%
         if n == 0 or n == 1:
             return n
@@ -13,7 +15,17 @@ class Solution:
             return n
         return self.fib(n - 1) + self.fib(n - 2)
 
+    def fib_cache(self, n: int) -> int:
+        if n in self.cache:
+            return self.cache[n]
+        if n == 0 or n == 1:
+            return n
+        else:
+            result = self.fib(n - 1) + self.fib(n - 2)
+        self.cache[n] = result
+        return result
+
 
 if __name__ == "__main__":
-    res = Solution().fib(4)
+    res = Solution().fib_cache(4)
     print(res)
